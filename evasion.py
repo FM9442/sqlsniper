@@ -1,39 +1,67 @@
-#Credit : FM#9999
+#Credit : FM#1234
 
-import os, time, sys
+import os
+import time
+import sys
+import bdb
+import distutils
+import glob
+import inspect
+import json
+import logging
+import os
+import re
+import shutil
+import sys
+import tempfile
+import threading
+import time
+import traceback
+import warnings
+
+
+
 from time import sleep
 
-#os,sys pour system ,time ,colorama pour le temps,commande systeme,couleur 
 
 password = "Division 21"
 
-#cls = clear les element sur la console
 
 time.sleep(0)
 passtry=input("P4ssw0rd : ")
-os.system("cls")
+os.system("clear")
 if passtry == password:
     
-    print ("Code Bon")
-    time.sleep(1)
+    print("Correct password")
+    time.sleep(0.5)
     os.system("cls")
-    print("Quelle est votre choix ?")
+    print("Redirecting...")
+    time.sleep(0.5)
+    os.system("clear")
+    print("Menu")
     print("1 - SQL sniper")
     print("2 - Soon...")
-    choix = input("Quelle est choix : ")
+    choix = input("Choice : ")
+    
+    
     if choix == "1":
-        os.system("cls")
+        os.system("clear")
         print ("SQLMAP has been selected")
-        print("Mise a jour des paquets")
+        print("Updating your packages...")
+        time.sleep(1)
         os.system("sudo apt-get update -y")
+        os.system("clear")
         os.system("sudo apt-get install sqlmap")
+        os.system("clear")
+        os.system("sudo apt --fix-broken install")
         url=input("What's url website? : ")
-        os.system("sqlmap", url, "--dump-all")
+        os.system("sqlmap" + url + "--dump-all")
     elif choix == "2":
-        os.system("cls")
+        os.system("clear")
         print("Soon...")
     else:                 
-        print("ERROR:101") #Error:101 signifie que la saisie n'est pas correcte tel que un code
+        print("Answer!")
+
 else:
     print("Wrong password")
     print("")
