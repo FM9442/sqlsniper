@@ -32,7 +32,7 @@ if passtry == password:
         os.system("sudo apt-get install sqlmap")
         os.system("sudo pip3 install -r requirements.txt")
         url=input("What's url website? : ")
-        os.system("python sqlmap ", url, " --dump-all")
+        os.system("python " " sqlmap ", url, " --dump-all")
     elif choix == "2":
         os.system("cls")
         print("Soon...")
