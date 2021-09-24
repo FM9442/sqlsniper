@@ -55,7 +55,7 @@ if passtry == password:
         os.system("clear")
         os.system("sudo apt --fix-broken install")
         url=input("What's url website? : ")
-        os.system("sqlmap" + url + "--dump-all")
+        os.system("sqlmap " + url + " --dump-all")
     elif choix == "2":
         os.system("clear")
         print("Soon...")
