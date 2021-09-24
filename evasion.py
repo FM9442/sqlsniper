@@ -1,26 +1,6 @@
 #Credit : FM#1234
 
-import os
-import time
-import sys
-import bdb
-import distutils
-import glob
-import inspect
-import json
-import logging
-import os
-import re
-import shutil
-import sys
-import tempfile
-import threading
-import time
-import traceback
-import warnings
-
-
-
+import os, time, sys
 from time import sleep
 
 
@@ -29,7 +9,7 @@ password = "Division 21"
 
 time.sleep(0)
 passtry=input("P4ssw0rd : ")
-os.system("clear")
+os.system("cls")
 if passtry == password:
     
     print("Correct password")
@@ -37,7 +17,7 @@ if passtry == password:
     os.system("cls")
     print("Redirecting...")
     time.sleep(0.5)
-    os.system("clear")
+    os.system("cls")
     print("Menu")
     print("1 - SQL sniper")
     print("2 - Soon...")
@@ -45,19 +25,16 @@ if passtry == password:
     
     
     if choix == "1":
-        os.system("clear")
+        os.system("cls")
         print ("SQLMAP has been selected")
         print("Updating your packages...")
-        time.sleep(1)
         os.system("sudo apt-get update -y")
-        os.system("clear")
         os.system("sudo apt-get install sqlmap")
-        os.system("clear")
-        os.system("sudo apt --fix-broken install")
+        os.system("sudo pip3 install -r requirements.txt")
         url=input("What's url website? : ")
-        os.system("sqlmap " + url + " --dump-all")
+        os.system("python sqlmap ", url, " --dump-all")
     elif choix == "2":
-        os.system("clear")
+        os.system("cls")
         print("Soon...")
     else:                 
         print("Answer!")
